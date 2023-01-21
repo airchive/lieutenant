@@ -1,4 +1,4 @@
-import Application from "./loaders/application.loader";
+import Application from "./loaders/application";
 
 class Server extends Application {
   constructor() {

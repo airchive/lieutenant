@@ -1,7 +1,7 @@
 import express from "express";
 
+import router from "./router";
 import configs from "../.configs";
-import router from "./router.loader";
 import pingServer from "../middlewares/pingServer.middleware";
 
 class Application {

@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 import USER_SCHEMA from "./users.schema";
-import { catalog } from "../../../../loaders/database.loader";
+import { catalog } from "../../../../loaders/database";
 
 class UserModel {
   private _userModel: mongoose.Model<any>;

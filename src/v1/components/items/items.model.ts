@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 import ITEM_SCHEMA from "./items.schema";
-import { connectTo } from "../../../../loaders/database.loader";
+import { connectTo } from "../../../../loaders/database";
 
 class ItemModel {
   private _itemModel: mongoose.Model<any>;
