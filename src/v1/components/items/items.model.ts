@@ -1,13 +1,8 @@
-// Importing: Dependencies.
 import mongoose from "mongoose";
 
-// Importing: Loaders.
+import ITEM_SCHEMA from "./items.schema";
 import { connectTo } from "../../../../loaders/database.loader";
 
-// Importing: Schemas.
-import ITEM_SCHEMA from "./items.schema";
-
-// Declaring Item Model.
 class ItemModel {
   private _itemModel: mongoose.Model<any>;
 
@@ -26,5 +21,4 @@ class ItemModel {
   }
 }
 
-// Exporting Model.
 export default ItemModel;
