@@ -1,39 +1,21 @@
-// Importing: Dependencies.
 import jwt from "jsonwebtoken";
-
-// Importing: Configs.
-import configs from "../.configs";
-
-// Importing: Interfaces.
-import { AuthRequest } from "../interfaces/global";
 import { Response } from "express";
 import { NextFunction } from "express";
 
-// Declaring isAuthenticated middleware.
+import configs from "../.configs";
+import { AuthRequest } from "../interfaces/global";
+
 function isAuthenticated() {
   return async (req: AuthRequest, res: Response, next: NextFunction) => {
     try {
-      //#region Declaring variables.
       let token = req.headers["authorization"] || "";
       let hasToken = token ? true : false;
+      if (!hasToken) throw Error("Missing authorization token.");
 
-      // console.log(token);
-      // console.log(hasToken);
-      //#endregion
-
-      // Checking if token has been submitted.
-      if (!hasToken) {
-        throw Error("Missing authorization token.");
-      }
-
-      //#region Validating token.
       jwt.verify(
         token,
         configs.application.token.secret as string,
-        (error, user) => {
-          // console.log(error);
-          // console.log(user);
-
+        (error: Error, user: any) => {
           if (error) {
             throw Error("You're not authorized to access the resource.");
           }
@@ -41,11 +23,9 @@ function isAuthenticated() {
           req.user = user;
         }
       );
-      //#endregion
 
-      // Proceeding with the request.
       next();
-    } catch (error) {
+    } catch (error: Error) {
       res.status(401).json({
         error: {
           message: error.message,
@@ -55,5 +35,4 @@ function isAuthenticated() {
   };
 }
 
-// Exporting middleware.
 export default isAuthenticated;
