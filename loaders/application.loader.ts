@@ -1,16 +1,9 @@
-// Importing: Dependencies.
 import express from "express";
 
-// Importing: Loaders.
+import configs from "../.configs";
 import router from "./router.loader";
-
-// Importing: Middlewares.
 import pingServer from "../middlewares/pingServer.middleware";
 
-// Importing: Configs.
-import configs from "../.configs";
-
-// Declaring Application Loader.
 class Application {
   private _application: express.Application;
 
@@ -30,7 +23,6 @@ class Application {
 
     application.get("/ping", pingServer());
     application.use("/api", router);
-
     application.listen(configs.application.port);
 
     console.info(
@@ -41,5 +33,4 @@ class Application {
   }
 }
 
-// Exporting Loader.
 export default Application;
