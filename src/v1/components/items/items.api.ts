@@ -5,7 +5,7 @@ import { NextFunction } from "express";
 
 import ItemModel from "../items/items.model";
 import { AuthRequest } from "../../../../interfaces/global";
-import isAuthenticated from "../../../../middlewares/isAuthenticated.middleware";
+import isAuthenticated from "../../../../middlewares/isAuthenticated";
 
 let itemsRouter = express.Router();
 

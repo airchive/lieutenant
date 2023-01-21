@@ -2,7 +2,7 @@ import express from "express";
 
 import router from "./router";
 import configs from "../.configs";
-import pingServer from "../middlewares/pingServer.middleware";
+import pingServer from "../middlewares/pingServer";
 
 class Application {
   private _application: express.Application;
