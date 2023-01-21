@@ -1,45 +1,43 @@
-// Importing: Dependencies.
 import mongoose from "mongoose";
 
-// Declaring User Schema.
 const USER_SCHEMA = new mongoose.Schema({
   name: {
-    type: String,
     trim: true,
+    type: String,
   },
 
   surname: {
-    type: String,
     trim: true,
+    type: String,
   },
 
   username: {
+    trim: true,
     type: String,
     unique: true,
     lowercase: true,
-    trim: true,
   },
 
   email: {
-    type: String,
+    trim: true,
     unique: true,
+    type: String,
     required: true,
     lowercase: true,
-    trim: true,
   },
 
   password: {
-    type: String,
-    required: true,
-    select: false,
     trim: true,
+    type: String,
+    select: false,
+    required: true,
   },
 
   database: {
+    trim: true,
     type: String,
     required: true,
     lowercase: true,
-    trim: true,
   },
 
   isActive: {
@@ -48,5 +46,4 @@ const USER_SCHEMA = new mongoose.Schema({
   },
 });
 
-// Exporting Schema.
 export default USER_SCHEMA;

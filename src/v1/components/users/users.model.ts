@@ -1,13 +1,8 @@
-// Importing: Dependencies.
 import mongoose from "mongoose";
 
-// Importing: Loaders.
+import USER_SCHEMA from "./users.schema";
 import { catalog } from "../../../../loaders/database.loader";
 
-// Importing: Schemas.
-import USER_SCHEMA from "./users.schema";
-
-// Declaring User Model.
 class UserModel {
   private _userModel: mongoose.Model<any>;
 
@@ -25,5 +20,4 @@ class UserModel {
   }
 }
 
-// Exporting Model.
 export default UserModel;
