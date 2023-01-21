@@ -1,7 +1,7 @@
 {
   "name": "lieutenant",
   "version": "1.0.0",
-  "description": "A Node.js boilerplate for starting a Multi-tenant Node.js Application with MongoDB.",
+  "description": "Multi-Tenancy PoC written in Express.js.",
   "main": "index.js",
   "scripts": {
     "development:start": "nodemon build/release/server.js",
