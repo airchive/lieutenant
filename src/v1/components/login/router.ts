@@ -1,5 +1,5 @@
 import express from "express";
-import loginApi from "./login.api";
+import loginApi from "./api";
 
 let loginRouter = express.Router();
 loginRouter.use("/", loginApi);

@@ -3,7 +3,7 @@ import express from "express";
 import { Response } from "express";
 import { NextFunction } from "express";
 
-import ItemModel from "../items/items.model";
+import ItemModel from "./model";
 import { AuthRequest } from "../../../../interfaces/global";
 import isAuthenticated from "../../../../middlewares/isAuthenticated";
 

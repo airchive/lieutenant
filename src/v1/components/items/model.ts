@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-import ITEM_SCHEMA from "./items.schema";
+import ITEM_SCHEMA from "./schema";
 import { connectTo } from "../../../../loaders/database";
 
 class ItemModel {

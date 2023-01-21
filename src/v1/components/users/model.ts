@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-import USER_SCHEMA from "./users.schema";
+import USER_SCHEMA from "./schema";
 import { catalog } from "../../../../loaders/database";
 
 class UserModel {
