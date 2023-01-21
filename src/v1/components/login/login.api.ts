@@ -6,7 +6,7 @@ import { NextFunction } from "express";
 
 import UserModel from "../users/users.model";
 import { AuthRequest } from "../../../../interfaces/global";
-import generateNewToken from "../../../../scripts/generateNewToken.script";
+import generateNewToken from "../../../../scripts/generateNewToken";
 import isAuthenticated from "../../../../middlewares/isAuthenticated";
 
 let userModel = new UserModel();
