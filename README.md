@@ -9,7 +9,7 @@ Follow the steps below to make use of Lieutenant.
 
 2. Clone this repository:
 ```bash
-git clone https://github.com/Airscripts/lieutenant.git
+git clone https://github.com/airchive/lieutenant.git
 ```
 
 3. Write down these two commands in your terminal:
@@ -32,4 +32,4 @@ Choose what you find more suitable for you:
 - [Support me via linktr.ee](https://linktr.ee/airscript)
 
 ## 💳 License  
-This repository is licensed under [GPL-3.0 License](https://github.com/Airscripts/lieutenant/blob/main/LICENSE).
+This repository is licensed under [GPL-3.0 License](https://github.com/airchive/lieutenant/blob/main/LICENSE).
